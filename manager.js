@@ -5,6 +5,7 @@ class Manager extends Employee {
         super(name, salary, title, manager);
         this.employees = [];
 
+
     }
     addEmployee(employee) {
 
@@ -13,7 +14,7 @@ class Manager extends Employee {
     }
 }
 
-const splinter = new Manager('Splinter', 100000, 'Sensai');
+const splinter = new Manager('Splinter', 100000, 'Sensei');
 console.log('Before: ', splinter);
 
 const leo = new Employee('Leonardo', 90000, 'Ninja', splinter);
@@ -21,12 +22,10 @@ const mikey = new Employee('Michelangelo', 90000, 'Ninja', splinter);
 const donnie = new Employee('Donatello', 90000, 'Ninja', splinter);
 const raph = new Employee('Raphael', 90000, 'Ninja', splinter);
 
-splinter.addEmployee(leo);
-splinter.addEmployee(mikey);
-splinter.addEmployee(donnie);
-splinter.addEmployee(raph);
-
 console.log('After: ', splinter);
+
+
+
 
 
 

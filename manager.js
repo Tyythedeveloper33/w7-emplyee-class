@@ -1,23 +1,26 @@
 const Employee = require("./employee")
 
 class Manager extends Employee {
-    constructor(name, salary, title, manager = null, employees) {
+    constructor(name, salary, title, manager = null) {
         super(name, salary, title, manager);
         this.employees = [];
-        // if (this.manager === undefined) {
-        //     this.manager = null
-        // } else {
-        //     this.manager = manager
-        // }
+
     }
     addEmployee(employee) {
-        if(employee === this){
-         console("error, cannot add mager as their own employee")
-         return
-        }
-        this.employees.push(...[employee]);
-        employee.manager = this;
-        console.log(employee)
+
+            this.employees.push(employee);
+
+
+            // console.log(this)
+        // if (employee !== this) {
+            // employee.manager = this;
+            // console.log(employee)
+
+        // } else {
+            // console.log("a manager cannot add themselves as an employee")
+
+        // }
+
 
     }
 }

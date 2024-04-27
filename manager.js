@@ -1,26 +1,15 @@
 const Employee = require("./employee")
 
 class Manager extends Employee {
-    constructor(name, salary, title, manager = null) {
+    constructor(name, salary, title, manager = null, employees) {
         super(name, salary, title, manager);
         this.employees = [];
 
     }
     addEmployee(employee) {
-
-            this.employees.push(employee);
-
-
-            // console.log(this)
-        // if (employee !== this) {
-            // employee.manager = this;
-            // console.log(employee)
-
-        // } else {
-            // console.log("a manager cannot add themselves as an employee")
-
-        // }
-
+        this.employees.push(...[employee]);
+        employee.manager = this;
+        console.log(employee)
 
     }
 }
@@ -40,7 +29,7 @@ splinter.addEmployee(raph);
 
 console.log('After: ', splinter);
 
-
+splinter.addEmployee(splinter)
 
 
 

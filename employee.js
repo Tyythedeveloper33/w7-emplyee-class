@@ -8,12 +8,12 @@ class Employee {
     }
 }
 
-const leo = new Employee('Leonardo', 90000, 'Ninja');
-console.log(leo)
+// const leo = new Employee('Leonardo', 90000, 'Ninja');
+// console.log(leo)
 
 // do not modify below
 try {
-    module.exports = Empolyee
+    module.exports = Employee
 } catch {
     module.exports = null;
 }

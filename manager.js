@@ -11,6 +11,10 @@ class Manager extends Employee {
         // }
     }
     addEmployee(employee) {
+        if(employee === this){
+         console("error, cannot add mager as their own employee")
+         return
+        }
         this.employees.push(...[employee]);
         employee.manager = this;
         console.log(employee)
@@ -33,8 +37,8 @@ splinter.addEmployee(raph);
 
 console.log('After: ', splinter);
 
-splinter.addEmployee(splinter)
-// splinter.addEmployee(tank)
+
+
 
 
 try {

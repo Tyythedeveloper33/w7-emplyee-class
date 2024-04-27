@@ -1,13 +1,18 @@
 
 class Employee {
-    constructor(name, salary, title, manager = null) {
+    constructor(name, salary, title, manager = null, bonus) {
         this.name = name;
         this.salary = salary;
         this.title = title;
         this.manager = manager;
+        this.bonus = bonus;
 
     if(manager){
         manager.addEmployee(this);
+
+    }
+    calculateBonus(multiplier); {
+        incentative = (this.salary) * multiplier
 
     }
     }
